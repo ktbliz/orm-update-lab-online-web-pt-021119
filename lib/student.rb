@@ -18,6 +18,8 @@ class Student
     SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
+    
+    self.id = DB[:conn].execute()
   end
   
   def self.create_table
